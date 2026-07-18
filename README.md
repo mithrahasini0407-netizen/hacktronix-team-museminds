@@ -1,4 +1,4 @@
-# HackTronix 2.0 — Team Eclipse
+# HackTronix 2.0 — Team Muse Minds
 
 **Track B — Artificial Intelligence**
 **Team Members:** Mithrahasini T S, Sadhana M, Gayathri Priya K P
@@ -77,4 +77,3 @@ python distance_estimator.py
 - Detection requires reasonably good lighting and a front-facing pose
 
 ---
-
