@@ -119,4 +119,3 @@ python distance_estimator.py
  * Haar Cascade accuracy decreases at longer distances (>90cm) due to bounding box size variance
  * Detection requires reasonably good lighting and a front-facing pose
 ```
----
