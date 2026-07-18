@@ -2,7 +2,7 @@ import cv2
 import math
 
 # ---- Calibrated values (from your setup) ----
-FOCAL_LENGTH = 354.7      # calculated from calibration
+FOCAL_LENGTH = 354.7      # recalculated from careful calibration
 REAL_FACE_WIDTH = 15      # cm, average human face width
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -48,6 +48,11 @@ while True:
                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
 
         cv2.circle(frame, (face_center_x, face_center_y), 5, (0, 0, 255), -1)
+
+    # This checks: did we find ANY face at all this frame?
+    if len(faces) == 0:
+        cv2.putText(frame, "No face detected", (20, 40),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
 
     cv2.imshow("Distance Estimator", frame)
 
