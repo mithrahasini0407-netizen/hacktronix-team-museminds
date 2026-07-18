@@ -2,7 +2,7 @@ import cv2
 import math
 
 # ---- Calibrated values (from your setup) ----
-FOCAL_LENGTH = 386.7      # calculated from your calibration
+FOCAL_LENGTH = 354.7      # calculated from calibration
 REAL_FACE_WIDTH = 15      # cm, average human face width
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -25,7 +25,7 @@ while True:
         break
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=8, minSize=(80, 80))
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=8, minSize=(50, 50))
 
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
